@@ -1,0 +1,45 @@
+.wrapper {
+}
+
+.header {
+    background-color: #000;
+    color: #fff;
+
+    &__container {
+        max-width: 1080px;
+        height: 150px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__name {
+        font-size: 32px;
+    }
+
+    &__search {
+        flex: 0 1 60%;
+        height: 40px;
+        background: #48474c;
+        border-radius: 5px;
+        // width: 100%;
+        color: #fff;
+        border: none;
+        padding: 5px 0 5px 36px;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}
