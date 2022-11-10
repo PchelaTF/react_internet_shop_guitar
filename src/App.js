@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import IconFavorites from './components/IconFavorites/IconFavorites';
+import IconShoppingCart from './components/IconShoppingCart/IconShoppingCart';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="wrapper">
+            <header className="header">
+                <div className="header__container">
+                    <div className="header__name">Guitar shop</div>
+                    
+                    
+
+                    <input className='header__search' type="text" placeholder="Search" />
+
+                    <div className="header__icons">
+                        <div className="header__favorites">
+                            <IconFavorites />
+                        </div>
+                        <div className="header__shopping-cart">
+                            <IconShoppingCart />
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    )
 }
 
 export default App;
