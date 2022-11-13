@@ -1,0 +1,18 @@
+.footer {
+    color: #fff;
+    background-color: #000;
+
+    &__container {
+        max-width: 1080px;
+        margin: 0 auto;
+        text-align: center;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .create {
+        margin: 0;
+    }
+}

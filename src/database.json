@@ -1,0 +1,62 @@
+{
+    "guitars": [
+        {
+            "acoustic-guitars": [
+                {
+                    "id": 1,
+                    "image": "https://leaderpromusic.ua/image/cache/catalog/guitars/acustic-guitars/1871_maxtone-wgc4010-nat_front-view_leaderpromusic-500x500.jpg",
+                    "name": "Maxtone WGC4010 NAT",
+                    "price": "90"
+                },
+                {
+                    "id": 2,
+                    "image": "https://leaderpromusic.ua/image/cache/catalog/guitars/acustic-guitars/parksonsjb4111bk/8157_parksons-jb4111_black_front-side-view_leaderpromusic-500x500.jpg",
+                    "name": "Parksons JB4111 BK",
+                    "price": "101"
+                },
+                {
+                    "id": 3,
+                    "image": "https://leaderpromusic.ua/image/cache/catalog/product/fender-cd-60s-black-wn/4677_fender-cd-60s-black-wn_frontview_1_leaderpromusic-500x500.jpg",
+                    "name": "Fender CD-60S WN BK",
+                    "price": "332"
+                },
+                {
+                    "id": 4,
+                    "image": "https://leaderpromusic.ua/image/cache/catalog/guitars/acustic-guitars/2485_cort-sfx-me-bks_front-right_leaderpromusic-500x500.jpg",
+                    "name": "Cort SFX-ME BKS",
+                    "price": "206"
+                },
+                {
+                    "id": 5,
+                    "image": "https://leaderpromusic.ua/image/cache/catalog/product/yamaha-fg800m-nt/4398_yamaha-fg800m-nt_front-view_1_leaderpromusic-500x500.jpg",
+                    "name": "Yamaha FG800M NAT",
+                    "price": "359"
+                },
+                {
+                    "id": 6,
+                    "image": "https://leaderpromusic.ua/image/cache/catalog/product/fender-cd-60-v3-wn-natural/6552_fender-cd-60-v3-wn-natural_front-view_1_leaderpromusic-500x500.jpg",
+                    "name": "Fender CD-60 V3 WN NAT",
+                    "price": "234"
+                },
+                {
+                    "id": 7,
+                    "image": "https://leaderpromusic.ua/image/cache/catalog/guitars/acustic-guitars/yamahaf310/483_yamaha-f310-nat_front-right-view_leaderpromusic-500x500.jpg",
+                    "name": "Yamaha F310 NAT",
+                    "price": "156"
+                },
+                {
+                    "id": 8,
+                    "image": "https://leaderpromusic.ua/image/cache/catalog/product/cortad810op/0794_cort-ad810-op_left-front-side-view_1_leaderpromusic-500x500.jpg",
+                    "name": "Cort AD810 OP",
+                    "price": "156"
+                },
+                {
+                    "id": 9,
+                    "image": "https://leaderpromusic.ua/image/cache/catalog/guitars/acustic-guitars/6218_washburnad5-front-right-view_leaderpromusic-500x500.jpg",
+                    "name": "Washburn AD5 NAT",
+                    "price": "166"
+                }
+            ]
+        }
+    ]
+}
