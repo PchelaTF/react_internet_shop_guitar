@@ -1,5 +1,6 @@
 import React from 'react';
 import database from "../../database.json"
+import Counter from '../Counter/Counter';
 
 const Catalog = ({ onAdd }) => {
 
@@ -18,6 +19,7 @@ const Catalog = ({ onAdd }) => {
                         <h2 className="item__body-name">{item.name}</h2>
                         <span className="item__body-price">{item.price} $</span>
                         <button onClick={() => onAdd(item)}>Add to cart</button>
+                        <Counter />
                     </div>
                 </div>
             )
@@ -31,7 +33,6 @@ const Catalog = ({ onAdd }) => {
     }
 
     const catalogItems = renderItems()
-
 
     return (
         <div className="catalog">

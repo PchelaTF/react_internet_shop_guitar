@@ -45,6 +45,11 @@
         color: #000;
         padding: 25px;
 
+        &-empty {
+            text-align: center;
+            font-size: 18px;
+        }
+
         & .item {
             display: flex;
             align-items: center;
@@ -90,7 +95,31 @@
             &__price {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 padding-right: 25px;
+
+                & .quatity {
+                    display: flex;
+                    align-items: center;
+                    gap: 1px;
+
+                    &__minus,
+                    &__count,
+                    &__plus {
+                        padding: 3px 6px;
+                        border: 1px solid #000;
+                    }
+
+                    &__minus {
+                        border-radius: 20px 0 0 20px;
+                        cursor: pointer;
+                    }
+
+                    &__plus {
+                        border-radius: 0 20px 20px 0;
+                        cursor: pointer;
+                    }
+                }
 
                 &-total {
                     font-weight: 700;

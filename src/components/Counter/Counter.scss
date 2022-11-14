@@ -1,0 +1,22 @@
+.quatity {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+    &__minus,
+    &__count,
+    &__plus {
+        padding: 3px 6px;
+        border: 1px solid #fff;
+    }
+
+    &__minus {
+        border-radius: 20px 0 0 20px;
+        cursor: pointer;
+    }
+
+    &__plus {
+        border-radius: 0 20px 20px 0;
+        cursor: pointer;
+    }
+}

@@ -1,39 +1,23 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import ShoppingCartItem from '../ShoppingCartItem/ShoppingCartItem';
 import './ShoppingCart.scss'
 
 const ShoppingCart = ({ cartOpen, setCartOpen, orders }) => {
+    const initTotal = () => {
+        let permTotal = 0
 
-    function renderOrdersItems() {
-        const items = orders.map(item => {
-            return (
-                <div
-                    className="shopping-cart__body-item item"
-                    key={item.id}>
-                    <div className="item__remove">x</div>
-                    <div className="item__image">
-                        <img src={item.image} alt={item.name} />
-                    </div>
-                    <div className="item__content">
-                        <p className="item__name">{item.name}</p>
-                        <div className="item__price">
-                            <div className="item__quantity quatity">
-                                <div className="quatity__minus"></div>
-                                <div className="quatity__count"></div>
-                                <div className="quatity__plus"></div>
-                            </div>
-                            <p className="item__price-total">{item.price} $</p>
-                        </div>
-                    </div>
-                </div>
-            )
+        orders.map(item => {
+            permTotal += +item.price
         })
 
-        return items
+        return permTotal
     }
 
-    const orderItems = renderOrdersItems()
-    const content = orders !== [] ? orderItems : "Yors shopping cart is empty"
-    console.log(content);
+    const [total, setTotal] = useState(initTotal())
+
+    function totalPrice(price, increase = true) {
+        increase ? setTotal(prev => prev + +price) : setTotal(prev => prev - +price)
+    }
 
     return (
         <div className='shopping-cart' onClick={() => setCartOpen(!cartOpen)}>
@@ -44,31 +28,13 @@ const ShoppingCart = ({ cartOpen, setCartOpen, orders }) => {
                 </div>
 
                 <div className="shopping-cart__body">
-
-                    {orders.length !== 0 ? orderItems : "Yors shopping cart is empty"}
-
-                    {/* <div className="shopping-cart__body-item item">
-                        <div className="item__remove">x</div>
-                        <div className="item__image">
-                            <img src="https://leaderpromusic.ua/image/cache/catalog/product/cortad810op/0794_cort-ad810-op_left-front-side-view_1_leaderpromusic-90x90.jpg" alt="" />
-                        </div>
-                        <div className="item__content">
-                            <p className="item__name">Cort AD810 OP</p>
-                            <div className="item__price">
-                                <div className="item__quantity quatity">
-                                    <div className="quatity__minus"></div>
-                                    <div className="quatity__count"></div>
-                                    <div className="quatity__plus"></div>
-                                </div>
-                                <p className="item__price-total">4599 hrn</p>
-                            </div>
-                        </div>
-                    </div> */}
-
+                    {orders.map(el => {
+                        return <ShoppingCartItem key={el.id} item={el} totalPrice={totalPrice} />
+                    })}
                 </div>
 
                 <div className="shopping-cart__total">
-                    <p className="shopping-cart__total-sum">Total: 4599 $</p>
+                    <p className="shopping-cart__total-sum">Total: {total} $</p>
                 </div>
 
             </div>

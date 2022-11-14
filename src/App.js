@@ -8,19 +8,24 @@ function App() {
     const [orders, setOrders] = useState([])
 
     function addToOrders(item) {
-        setOrders([...orders, item])
+        let inOrdedrs = false
+
+        orders.forEach(el => {
+            if (el.id === item.id) inOrdedrs = true
+        })
+
+        if (!inOrdedrs) setOrders([...orders, item])
     }
 
     return (
         <div className="wrapper">
-            <Header orders={orders}/>
+            <Header orders={orders} />
 
             <main className="main">
                 <div className="main__container">
                     <Catalog onAdd={addToOrders} />
                 </div>
             </main>
-
 
             <Footer />
         </div>
